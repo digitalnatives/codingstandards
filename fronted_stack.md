@@ -17,9 +17,9 @@ Last two versions of the following browsers: ***Chrome, Firefox, iOs Safari, Saf
 * IE - 9*, 10+
 * Opera - 12
 
-\**(no animation, transitions - gracefull degradation)*
+\* *(no animation, transitions )*
 
-:warning: **ECMAScript 5** compatility is a must (Function.bind polyfill is an exception)!: http://kangax.github.io/es5-compat-table/
+**ECMAScript 5** compatility is a must (Function.bind polyfill is an exception)!: http://kangax.github.io/es5-compat-table/
 
 ## Building
 Use Sprockets or alternatives for bulding, concatenation and minification.
@@ -109,9 +109,15 @@ Routing is done via **hashtags** and the **hashchange** event. To trigger a chan
 * Display / Interaction Layer - [MUI](http://m-ui.org/)
 
 ## Generic Websites
-*# TODO*
 
-* Haml for HTML
-* JQuery 2.0
-* :warning: DO NOT return JavaScript that runs in the browser, use JSON instead!
+### Architecture
+* Display Layer (Browser) - The page is loaded and displayed directly from the server
+* Interaction Layer - Interactions are defined after load and they usually few in number
+
+### Rendering
+* **Haml** or **JADE**
+
+### Interactions
+* JQuery
+* DO NOT return JavaScript that runs in the browser, use JSON instead!
 
