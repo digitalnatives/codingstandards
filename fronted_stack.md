@@ -4,6 +4,7 @@ Table of contents:
 
 * Supported Browsers
 * Building
+* Assets
 * CSS
 * JavasScript
 * General
@@ -27,6 +28,25 @@ Use Sprockets or alternatives for bulding, concatenation and minification.
 * [Sprockets](https://github.com/sstephenson/sprockets) (Ruby)
 * [Mincer](https://github.com/nodeca/mincer) (nodejs)
 
+### Uglifying
+
+* Sprokects compresses assets automaticly.
+* Mincer has built in support, it just have to be enabled:
+  https://github.com/nodeca/mincer/blob/a027e611104b903a4ca7e60b5f206a423b821877/examples/environment.js#L84
+
+## Assest
+
+### Responsive Images
+Use [Picturefill](https://github.com/scottjehl/picturefill) to display images according to media queries (at loading time).
+
+### Icons
+Display icons with icon-font instead of images where ever it is possible, because:
+
+* Smaller file size
+* Fewer files
+* Scaleable
+* Colorable
+
 ## CSS
 
 ### Software
@@ -47,6 +67,10 @@ Use Sprockets or alternatives for bulding, concatenation and minification.
 * **[CoffeeScript](https://github.com/jashkenas/coffee-script)** (preprocessor)
   * Ruby: `gem install coffee-script`
   * NodeJS: `npm install coffee-script`
+
+### Testing
+For unit testing use in a different environment that loads [Mocha](http://visionmedia.github.io/mocha/), an assertion library
+and the unit tests.
 
 ### Style Guide
 *Link to coffeescript style guide*
@@ -77,7 +101,7 @@ Defualt media queries for devices:
   `(min-width: 1824px)`
 
 ### Testing
-Integration testing is done via **Cucumber** and **Selenium** via [PhantomJS](http://phantomjs.org/) or [SlimerJS](http://slimerjs.org/)
+\# TODO: CasperJS?
 
 ## Single Page Applications
 
@@ -104,9 +128,13 @@ Routing is done via **hashtags** and the **hashchange** event. To trigger a chan
 * **JSON** - Use JSON for data transfer
 
 ### Default Stack
+
 * Communication Layer - [jQuery](http://jquery.com/) / [Zepto](http://zeptojs.com/)
 * Model Layer - [Backbone.js](http://backbonejs.org/)
 * Display / Interaction Layer - [MUI](http://m-ui.org/)
+
+Or: 
+* Angular
 
 ## Generic Websites
 
